@@ -1,0 +1,5 @@
+CC=gcc
+CFLAGS=-std=c11 -Wall -Werror -Wextra -pedantic -g
+
+foo: foo.c
+	$(CC) -o foo foo.c $(CFLAGS)
