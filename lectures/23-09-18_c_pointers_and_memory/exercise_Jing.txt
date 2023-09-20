@@ -1,0 +1,36 @@
+1. 
+int x;
+int *p;
+p = &_x____;
+*p = _0____;
+
+2.
+int x;
+int *p;
+int **pp;
+pp = &p_____;
+p = &_x____;
+**pp = ___0__;
+
+3.
+int x, y;
+int *p = &__x___;  // there is a star, it's a data type, but it still an address 
+p = _&_x___;  // we can also write p = p 
+*p = 0; // here the star means the value of p 
+p = _&_y___;
+*p = 1;
+
+4.
+int x, y;
+int* arr[2];
+arr[0] = &x_____;
+arr[1] = arr[0];
+*(arr[1]) = ___1__;
+*(arr[0]) = *(arr[0]) - 1;
+
+
+[&x, &x]
+*(&x) = 1 ===> x = 1 
+ *(&x)= *(&x) -1 ========> x =1-1=0
+
+- give a qualified guess for the type declaration of arr

@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(void) {
-  int a[10] = { 1,2,3,4,5,6,7,8,9,10 };
+  int a[10] = { 1,2,3,4,5,6,7,8,9,10 };//every int is 4 byte
 
   //  for (int i; i < 10; i++) {
   //    printf("&a[%d] = %p\n", i, &a[i]);
@@ -14,7 +14,9 @@ int main(void) {
 
   for (int i = 0; i < 10; i++) {
     printf("p: %p\n", (void*)p);
-    printf("*p: %d\n", *p);
+    printf("*p: %d\n", *p); 
     p = p + 1; // implicit * sizeof(int)
   }
 }
+
+// it returns some continuous address

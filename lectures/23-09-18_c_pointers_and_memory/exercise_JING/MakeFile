@@ -1,0 +1,6 @@
+CC=gcc
+CFLAGS=-std=c11 -Wall -Wextra -pedantic -g
+
+
+hexabyte: hexabyte.c
+	$(CC) -o hexabyte hexabyte.c $(CFLAGS)
