@@ -24,10 +24,15 @@ int stack_push(struct stack *s, int x) {
 int main(void) {
   struct stack s;
   stack_init(&s);
+  printf("Initial top: %d\n", s.top);
   assert(stack_push(&s, 100) == 0);
   assert(stack_push(&s, 200) == 0);
   assert(stack_push(&s, 300) == 0);
+<<<<<<< HEAD
   
+=======
+  printf("Final top: %d\n", s.top);
+>>>>>>> d617e209b6ca9aa5eaf2c61d665042c00aebe6a1
 }
 
 

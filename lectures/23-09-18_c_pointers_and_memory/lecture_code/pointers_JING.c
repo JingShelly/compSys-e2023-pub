@@ -8,19 +8,18 @@ int main(void) {
   printf("y: %d\n", y);
   printf("&y: %p\n", (void*)&y);
 
+<<<<<<< HEAD
   // return 0;
 
   int* px; // * Pointer Declaration
   int* py;
+=======
+  int* px;
+  int *py;
+>>>>>>> d617e209b6ca9aa5eaf2c61d665042c00aebe6a1
 
   px = &x;
   py = &y;
-
-  // x x x x
-  // y y y y
-  // px px px px px px px px
-  // py py py py py py py py
-
 
   // x has type T
   // &x has type T*

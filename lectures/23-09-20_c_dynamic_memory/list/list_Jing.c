@@ -10,7 +10,9 @@ struct list {
   struct list_node *head;
 };
 
+// double pointers, we will just maintain the pointers 
 struct list* list_create(void) {
+  // 8 bytes, give space for our intial pointer and integer
   struct list *list = malloc(sizeof(struct list));
   list->head = NULL;
   return list;
