@@ -1,0 +1,15 @@
+PP: physical page
+vp: vitual page
+pa: physical address
+va: vitual address
+mmu: memory management unit
+pt: page table
+pte: pt entry
+TLB: translation lookaside buffer
+TLBI-TLB index
+TLBT: TLB tag
+VPO: vp offset
+vpn: vp number
+ppo: pp offset
+ppn ppnumber
+ptbr: page table base number

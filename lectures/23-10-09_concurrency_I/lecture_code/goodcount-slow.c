@@ -35,3 +35,11 @@ int main(int argc, char **argv) {
   else
     printf("Good: %d\n", cnt);
 }
+///time ./goodcount-slow 20000 to calculate the time 
+//real: physical time from starting command to finish, progresses
+//system: time spent on the kernel cores
+//user: it is a measure of each thread. the sum of each thread 
+//The concept of mutex is to lock some of the memory and not permit parallel progress
+//some of that time is overlap
+//Because we lock it every time, so it is slow 
+//graping it does take some of the competition 

@@ -3,6 +3,9 @@
 #include <sys/types.h>
 
 int main(void) {
+
+  printf("this will only be printed once\n");
+
   pid_t ret = fork();
 
   if (ret == 0) {

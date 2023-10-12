@@ -12,34 +12,34 @@ variable `x` is 0.
 
     int x;
     int *p;
-    p = &_____;
-    *p = _____;
+    p = &_x____;
+    *p = __0___;
 
 ### 2.
 
     int x;
     int *p;
     int **pp;
-    pp = &_____;
-    p = &_____;
-    **pp = _____;
+    pp = &__p___;
+    p = &___x__;
+    **pp = ___0__;
 
 ### 3.
 
     int x, y;
-    int *p = &_____;
-    p = _____;
+    int *p = &__x___;
+    p = ___&x__;
     *p = 0;
-    p = _____;
+    p = __&y___;
     *p = 1;
 
 ### 4.
 
     int x, y;
     int* arr[2];
-    arr[0] = _____;
+    arr[0] = __x___;
     arr[1] = arr[0];
-    *(arr[1]) = _____;
+    *(arr[1]) = __1___;
     *(arr[0]) = *(arr[0]) - 1;
 
     - give a qualified guess for the type declaration of arr

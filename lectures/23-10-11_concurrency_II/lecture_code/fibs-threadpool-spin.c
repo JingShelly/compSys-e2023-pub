@@ -5,6 +5,11 @@
 #include <assert.h>
 #include <unistd.h>
 
+
+//This is kind of academic correct, but we waste some resources 
+//waiting for response of 1 
+//waste some clock cycle for this continuous spining
+//We want to sleep spining 
 int fib (int n) {
   if (n < 2) {
     return 1;
@@ -21,6 +26,8 @@ void* worker(void* arg) {
   arg=arg;
   int done = 0;
 
+  //!done, if done is 0, then !done is true, 
+  //Otherwise !done is false
   while (!done) {
     char *my_line = NULL;
     assert(pthread_mutex_lock(&line_mutex) == 0);
@@ -29,7 +36,7 @@ void* worker(void* arg) {
       done = 1;
     }
 
-    if (line != NULL) {
+    if (line != NULL) {//we protected the shared global variable line 
       my_line = line;
       line = NULL;
     }
@@ -70,7 +77,7 @@ int main(void) {
     }
   }
 
-  die = 1;
+  die = 1;//be careful about mutex. do more mutex than possible
 
   for (int i = 0; i < num_threads; i++) {
     pthread_join(threads[i], NULL);

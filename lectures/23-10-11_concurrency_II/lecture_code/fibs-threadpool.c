@@ -24,7 +24,7 @@ void* worker(void* arg) {
 
   while (!done) {
     char *my_line = NULL;
-    assert(pthread_mutex_lock(&line_mutex) == 0);
+    assert(pthread_mutex_lock(&line_mutex) == 0);// it cannot parallized
 
     if (line == NULL && !die) {
       pthread_cond_wait(&line_cond, &line_mutex);

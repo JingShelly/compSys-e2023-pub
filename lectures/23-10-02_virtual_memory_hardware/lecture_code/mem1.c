@@ -22,3 +22,10 @@ int main(int argc, char** argv) {
     }
   }
 }
+// we are tring to acesse the memory several times and see how the stride.... 
+// we can try to give the argument like 15 100000 100000(sth very large)
+// and then give it 15 1000000 1000000 again,and observe how htop looks like
+//if we keep allocate the memory again and again, then it is a lot of cache misses
+// Then it will reach a point where the os will say stop it.
+
+//we can assign more vitual memory than it is allowed 

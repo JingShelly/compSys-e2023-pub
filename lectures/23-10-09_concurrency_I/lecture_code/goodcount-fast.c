@@ -7,7 +7,11 @@ volatile int cnt = 0;
 
 void *thread(void *vargp) {
   int n = *((int*)vargp);
-
+  //it makes sense if we have a local variable. 
+  //if each thread counting 1 milion times, 
+  //then just do the big increment in the end
+  //It will not change our algorithm, it will have far less overlap 
+  //Try to build a style to use the parallesization
   int local_cnt = 0;
   for (int i = 0; i < n; i++) {
     local_cnt++;

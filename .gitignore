@@ -2,4 +2,6 @@
 /ModernC.pdf
 /testcanRun.txt
 /A0-2023/
-/23-09-13_computer_arthimetic/
+/23-09-13_computer_arthimetic/*
+*.pdf
+/23-09-18_c_pointers_and_memory/*

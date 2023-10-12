@@ -1,0 +1,31 @@
+inter- Thread communication:
+channels: you can use socket or use complete different processes 
+
+int pfd
+pipe(pfd);
+A pipe is unidirectional with a dedicated read and write file descriptions. 
+
+write()
+read()
+
+strdup
+
+
+dev/null: shorthand for ignoring the output
+
+why  the more threads not always faster than one thread
+
+because too many threads will cause too much step in which will add up the time 
+
+thread pool
+
+physical cores and hyper threads/hyper cores:
+hyper threads creates an ohter set of registers, it can only do one register physcially but
+it will not unload or load a bundle of registers. You donnot need to implemente another CPU, cache and so on
+It is kind of a hardware cheat 
+
+more processes will not gurantee speed up, because there will always be some overhead 
+
+
+
+

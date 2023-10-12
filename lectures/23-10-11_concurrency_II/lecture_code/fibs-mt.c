@@ -2,7 +2,6 @@
 #include <pthread.h>
 #include <stdlib.h>
 #include <string.h>
-
 int fib (int n) {
   if (n < 2) {
     return 1;
@@ -29,6 +28,9 @@ int main(void) {
 
   while ((line_len = getline(&line, &buf_len, stdin)) != -1) {
     pthread_create(&threads[i], NULL, fib_thread, strdup(line));
+    //strdup(line): we are going to pass a duplicate of line, duplicate memory
+    //this is to avoid race condition 
+    //
     i++;
   }
 

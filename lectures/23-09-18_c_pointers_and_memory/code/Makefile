@@ -8,6 +8,9 @@ clean:
 mem: mem.c
 	gcc -o mem $(CFLAGS) mem.c
 
+checkEngdian: checkEngdian.c
+	gcc -o checkEngdian $(CFLAGS) checkEngdian.c
+
 args: args.c
 	gcc -o args $(CFLAGS) args.c
 
